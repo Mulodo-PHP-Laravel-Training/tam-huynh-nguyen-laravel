@@ -66,5 +66,5 @@ CREATE TABLE `comment` (
         KEY `post_user_id_foreign` (`user_id`),
         KEY `post_user_id_foreign` (`post_id`),
         CONSTRAINT `post_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE,
-        CONSTRAINT `post_user_id_foreign` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`) ON DELETE CASCADE
+        CONSTRAINT `post_post_id_foreign` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`) ON DELETE CASCADE
     ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
