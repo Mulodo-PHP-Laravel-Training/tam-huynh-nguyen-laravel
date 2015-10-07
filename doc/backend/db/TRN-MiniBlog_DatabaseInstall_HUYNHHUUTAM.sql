@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `user` (
         `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
         `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
         PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+    ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 
 --
 -- 'post' table structure
@@ -48,7 +48,7 @@ CREATE TABLE `post` (
         UNIQUE KEY `post_slug_unique` (`slug`),
         KEY `post_user_id_foreign` (`user_id`),
         CONSTRAINT `post_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE
-    ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+    ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 
 --
 -- 'comment' table structure
@@ -67,4 +67,4 @@ CREATE TABLE `comment` (
         KEY `post_user_id_foreign` (`post_id`),
         CONSTRAINT `post_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE,
         CONSTRAINT `post_post_id_foreign` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`) ON DELETE CASCADE
-    ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+    ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
